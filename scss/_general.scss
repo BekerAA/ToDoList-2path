@@ -1,0 +1,16 @@
+$black: #000;
+$while: #fff;
+
+$ro: "Roboto", sans-serif;
+$web: 1440px;
+
+
+body{
+  font-family: $ro;
+  background: #d1d5de;
+}
+
+.website{
+  max-width: $web;
+  margin: auto;
+}
