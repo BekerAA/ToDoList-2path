@@ -35,3 +35,57 @@
     font-weight: 300;
   }
 }
+
+
+
+.task{
+  max-width: 1140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: 20px ;
+  margin: auto;
+}
+
+.task:not(:last-child){
+  padding-bottom: 20px;
+  border-bottom: 1px solid black;
+}
+
+.task__text{
+  font-size: 20px;
+  font-weight: 300;
+  margin-top: 20px;
+  margin-left: 20px;
+  
+}
+
+.task__button{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  margin-right: 20px;
+}
+
+.task__complit{
+  input{
+    display: none;
+
+  }
+  .chec-com{
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    h6{
+      font-size: 20px;
+      margin-left: 6px ;
+      margin-right: 0;
+    }
+    &:hover{
+      background: #7fffd4;
+    }
+  }
+}
+
