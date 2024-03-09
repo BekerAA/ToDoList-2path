@@ -17,7 +17,7 @@
 
 .panel{
   max-width: 1200px;
-  height: 200px;
+  
   margin: auto;
   background-color: rgba(0, 0, 0, 0.4);
   box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.1);
@@ -42,11 +42,31 @@
     font-weight: 100;
     padding: 0 10px;
     height: 40px;
-    border: 1px solid black;
-    border-radius: 10px;
-   
+    border-radius: 5px;
+    border: 1px solid white;
+  }
+  h6{
+    color: $while;
+    font-size: 12px;
+    font-weight: 100;
+    margin-left: 40px;
   }
 }
+
+.btn{
+  display: inline-block;
+  margin: 10px 25px;
+  padding: 10px 20px;
+  border: 1px solid white;
+  color: white;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  &:hover{
+    background: blue;
+    border: 1px solid blue;
+  }
+}
+
 
 
 .todo__list{
