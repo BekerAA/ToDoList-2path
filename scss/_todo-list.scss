@@ -60,6 +60,7 @@
   border: 1px solid white;
   color: white;
   border-radius: 5px;
+  cursor: pointer;
   transition: all 0.3s ease;
   &:hover{
     background: blue;
@@ -71,7 +72,7 @@
 
 .todo__list{
   max-width: 1200px;
-  min-height: 200px;
+  min-height: 125px;
   margin: auto;
   background-color: rgba(255, 255, 255, 0.4);
   box-shadow: 8px 8px 8px 8px rgba(0, 0, 0, 0.1);
@@ -81,25 +82,31 @@
 .info{
   text-align: center;
   img{
-    margin-top: 50px;
+    margin-top: 25px;
     width: 60px;
     height: 60px;
   }
   h6{
     font-size: 18px;
     font-weight: 300;
+    
   }
 }
 
 
 
-.task{
+.todo__task{
   max-width: 1140px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   padding-bottom: 20px ;
   margin: auto;
+}
+
+.todo__task-complit .task__text{
+  text-decoration: line-through;
+  color: rgba(0, 0, 0, 0.4)
 }
 
 .task:not(:last-child){
@@ -134,6 +141,7 @@
     background-color: #d1d5de;
     border-radius: 5px;
     transition: all 0.3s ease;
+    cursor: pointer;
     h6{
       font-size: 20px;
       margin-left: 6px ;
@@ -148,6 +156,7 @@
 .task__delete{
   input{
     display: none;
+    ;
   }
   .chec-del{
     width: 30px;
@@ -156,6 +165,7 @@
     background-color: #d1d5de;
     border-radius: 5px;
     transition: all 0.3s ease;
+    cursor: pointer;
     h6{
       font-size: 20px;
       font-weight: 100;
