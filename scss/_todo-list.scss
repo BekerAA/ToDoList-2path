@@ -100,8 +100,12 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-bottom: 20px ;
+  padding-bottom: 20px;
   margin: auto;
+  
+}
+.todo__task:not(:last-child){
+  border-bottom: 1px solid black;
 }
 
 .todo__task-complit .task__text{
@@ -109,10 +113,7 @@
   color: rgba(0, 0, 0, 0.4)
 }
 
-.task:not(:last-child){
-  padding-bottom: 20px;
-  border-bottom: 1px solid black;
-}
+
 
 .task__text{
   font-size: 20px;
