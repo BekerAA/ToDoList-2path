@@ -3,40 +3,71 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ToDo приложение</title>
+  <title>ToDo-List</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet"> 
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/style.min.css">
 </head>
 <body>
   <div class="website">
-    <div class="cap">
-      <h3>ToDo приложение</h3>
-      <h6>список задач на сегодня</h6>
+    <div class="progect">
+
+      <div class="cap">
+        <h2 class="heading">ToDo приложение</h2>
+        <h4 class="heading__list">Список задач на сегодня</h4>
+      </div>
+
+      <div class="panel">
+        <h3 class="panel__heading">Добавить новую задачу</h3>
+        <div class="panel__input">
+          <input type="text" placeholder="Текст задания"> 
+        </div>
+        <h6 class="panel__prescription">Что делаем, сколько времени потратим на это и какой результат мы получим?</h6>
+        <div class="panel__btn">Добавить задачу</div>
+      </div>
+      <div class="todo__list">
+        
+        <!-- <div class="empty">
+          <img src="/img/free-icon-man-8455575.png">
+          <h6 class="empty__text">Список пуст</h6>
+        </div> -->
+
+        <div class="task">
+          <div class="task__text"><h6>Купить хлеб</h6></div>
+          <div class="task__button">
+            <label class="chekbox">
+              <input type="checkbox">
+              <div class="chec">✓</div>
+            </label>
+            <div class="delbox">✖</div>
+          </div>
+        </div>
+
+        <div class="task">
+          <div class="task__text"><h6>Купить хлеб</h6></div>
+          <div class="task__button">
+            <label class="chekbox">
+              <input type="checkbox">
+              <div class="chec">✓</div>
+            </label>
+            <div class="delbox">✖</div>
+          </div>
+        </div>
+
+        <div class="task">
+          <div class="task__text"><h6>Купить хлеб</h6></div>
+          <div class="task__button">
+            <label class="chekbox">
+              <input type="checkbox">
+              <div class="chec">✓</div>
+            </label>
+            <div class="delbox">✖</div>
+          </div>
+        </div>
+      </div>
     </div>
 
-    <div class="todo__add">
-      <div class="panel">
-        <h3 class="heading"> Добавить новую задачу</h6>
-          <div class="add">
-            <input id="new--task" type="text" placeholder="Что сегодня сделаем?">
-            <h6>Что делаем, сколько времени потратим на это и какой результат мы получим</h6>
-          </div>
-          <div id="add" class="btn">Добавить задачу</div>
-            
-        </div>
-      </div>
-    <div id="tasks" class="todo__list">
-      <div class="tasks__empty">
-        <div class="info">
-          <img src="/img/free-icon-man-8455575.png">
-          <h6>Список дел пуст</h6>
-        </div>
-      </div>
-        <script src="/js/script.js"></script>
-    </div>
-    </div>
   </div>
 </body>
 </html>
