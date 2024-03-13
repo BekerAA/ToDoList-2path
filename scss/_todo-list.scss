@@ -137,3 +137,10 @@
     border-bottom: 1px solid $black;
   }
 }
+
+.task__complit{
+  .task__text{
+    text-decoration: line-through;
+    color: rgba(0, 0, 0, 0.4)
+  }
+}
