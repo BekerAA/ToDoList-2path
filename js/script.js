@@ -13,7 +13,6 @@ dom.add.onclick = () => {
   const value = dom.new.value;
   if (value && repedTask(value,tasks)){
     TaskNew(value, tasks);
-    console.log(tasks)
     dom.new.value = "";
     renderTask(tasks);
   }
@@ -45,8 +44,8 @@ function repedTask(text, tasks){
 function renderTask(list){
   let html = "";
   list.forEach((task) => {
-    const sls = list.isComplete ? "task task__complit" : "task";
-    const chec = list.isComplete ? "cheacked" :  "";
+    const sls = task.isComplete ? "task task__complit" : "task";
+    const chec = task.isComplete ? "cheacked" :  "";
     const htmlTask = `
         <div id = "${task.id}"class="${sls}">
           <div class="task__text"><h6>${task.text}</h6></div>
@@ -65,4 +64,39 @@ function renderTask(list){
 }
 
 
-//фунццмя
+//Функция по отслеживаю клика по кнопкам в task
+dom.tasks.onclick  =  (event) => {
+  const target = event.target
+  const isCompleteBtm = target.classList.contains('chec');
+  const isDeleteBtn = target.classList.contains('delbox');
+  if(isCompleteBtm){
+    const task = target.parentElement.parentElement.parentElement
+    const idTask = task.getAttribute('id')
+    cheackedStatus(idTask, tasks);
+    renderTask(tasks);
+  }
+  if(isDeleteBtn){
+    const task = target.parentElement.parentElement;
+    const idTask = task.getAttribute('id');
+    deleteTask(idTask, tasks);
+    renderTask(tasks);
+  }
+}
+
+
+//Фуннкция по изменению положения 
+function cheackedStatus(id, link){
+  link.forEach((task) => {
+    if (task.id == id) {
+      task.isComplete = !task.isComplete
+    }
+  })
+}
+
+function deleteTask(id, list){
+  list.forEach((task, idx) => {
+    if (task.id == id){
+      list.splice(idx, 1)
+    }
+  })
+}
