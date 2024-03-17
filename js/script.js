@@ -80,6 +80,7 @@ dom.tasks.onclick  =  (event) => {
     const idTask = task.getAttribute('id');
     deleteTask(idTask, tasks);
     renderTask(tasks);
+    Emptiness(tasks);
   }
 }
 
@@ -99,4 +100,17 @@ function deleteTask(id, list){
       list.splice(idx, 1)
     }
   })
+}
+
+function Emptiness(list){
+  const pm = list.length;
+  if (pm === 0){
+    const men  = `
+    <div class="empty">
+        <img src="/img/free-icon-man-8455575.png">
+        <h6 class="empty__text">Список пуст</h6>
+    </div>
+    `
+    dom.tasks.innerHTML = men;
+  }
 }
